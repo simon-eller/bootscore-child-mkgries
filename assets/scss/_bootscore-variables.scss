@@ -1,2 +1,44 @@
 // In this file you can override the default variables of Bootstrap
 // Do you want primary to be green? Just add "$primary: #00FF00;" to this file and the theme will automatically compile the scss for you.
+
+/* COLORS */
+$primary: #8b7332;
+$secondary: #ccae54;
+$body-tertiary-bg: #eaeaea;
+$light: #fff;
+$dark: #000;
+
+/** light mode **/
+$primary-text: #000;
+$body-color: #000000;
+
+/* NAVBAR */
+$nav-link-font-size: 1.375rem;
+$nav-link-color: $light;
+$nav-link-hover-color: $primary;
+$navbar-dark-color: $light;
+$navbar-dark-hover-color: $primary;
+
+/* TEXT */
+$font-family-sans-serif: "Jost";
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 3 !default;
+$h2-font-size: $font-size-base * 2.5 !default;
+$h3-font-size: $font-size-base * 2 !default;
+$h4-font-size: $font-size-base * 1.75 !default;
+$h5-font-size: $font-size-base * 1.5 !default;
+$font-size-lg: $font-size-base * 1.875;
+
+$border-radius: 5px;
+
+$link-decoration:                         none;
+$link-hover-decoration:                   underline;
+
+$card-border-width:                 0;
+$card-border-radius:                $border-radius !default;
+$card-inner-border-radius:          $border-radius !default;
+$card-height:                       5rem;
+
+.swiper-slide .card-body{
+  padding: var(--bs-card-spacer-y) 0;
+}

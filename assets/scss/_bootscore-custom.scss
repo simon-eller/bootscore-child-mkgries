@@ -34,10 +34,10 @@
 /* END FONTS */
 
 /* IMAGE ZOOM EFFECT */
-div.swiper-slide {
+.swiper-slide {
   overflow: hidden;
 }
-div.swiper-slide img {
+.swiper-slide img {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -50,7 +50,7 @@ div.swiper-slide img {
   -o-transition: transform .3s ease;
   transition: transform .3s ease;
 }
-div.swiper-slide img:hover {
+.swiper-slide img:hover {
   -webkit-transform: scale(1.03);
   -moz-transform: scale(1.03);
   -ms-transform: scale(1.03);
