@@ -30,14 +30,39 @@
   font-weight: 600;
   src: url('../fonts/jost-v15-latin-600.woff2') format('woff2');
 }
-
 /* END FONTS */
 
-/* IMAGE ZOOM EFFECT */
-.swiper-slide {
-  overflow: hidden;
+/* ICON FONT */
+@font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/material-symbols-rounded.woff2') format('woff2');
 }
-.swiper-slide img {
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
+/* END ICON FONT */
+
+/* IMAGE ZOOM EFFECT */
+.swiper-slide-image-container {
+  overflow: hidden;
+  position: static;
+}
+.swiper-slide-image-container img {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -49,13 +74,25 @@
   -ms-transition: transform .3s ease;
   -o-transition: transform .3s ease;
   transition: transform .3s ease;
+
+  position: static;
 }
-.swiper-slide img:hover {
+.swiper-slide-image-container img:hover {
   -webkit-transform: scale(1.03);
   -moz-transform: scale(1.03);
   -ms-transform: scale(1.03);
   -o-transform: scale(1.03);
   transform: scale(1.03);
 }
-
 /* END IMAGE ZOOM EFFECT */
+
+/* IMAGE TRANSFORMATIONS */
+img{
+  border-radius: var(--bs-border-radius);
+}
+
+.navbar-brand img{
+  width: 5rem;
+}
+
+/* END IMAGE TRANSFORMATIONS */
