@@ -92,3 +92,64 @@ function footer_info_class() {
     return "bg-primary text-light pt-2 pb-3 fs-6";
 }
 add_filter('bootscore/class/footer/info', 'footer_info_class', 10, 2);
+
+/**
+ * Header position and bg
+ */
+function header_bg_class() {
+    return "sticky-top border-bottom p-3 bg-body";
+}
+add_filter('bootscore/class/header', 'header_bg_class', 10, 2);
+
+/**
+ * Change all header buttons
+ */
+function header_button_class() {
+    return "btn btn-primary";
+}
+add_filter('bootscore/class/header/button', 'header_button_class', 10, 2);
+
+/**
+ * Change search block button and icon
+ */
+function change_block_widget_search($block_content, $block) {
+
+    $search  = array(
+        'btn btn-outline-secondary ',
+        '<i class="fa-solid fa-magnifying-glass"></i>'
+    );
+    $replace = array(
+        'btn btn-primary ',
+        '<span class="material-symbols-rounded">search</span>'
+    );
+
+    return str_replace($search, $replace, $block_content);
+}
+add_filter('bootscore/block/search/content', 'change_block_widget_search', 10, 2);
+
+/**
+ * Change main content col
+ */
+
+/**
+ * Change sidebar responsive offcanvas
+ */
+function change_sidebar_offcanvas($col_size) {
+    return "offcanvas-lg offcanvas-start";
+}
+add_filter('bootscore/class/sidebar/offcanvas', 'change_sidebar_offcanvas');
+/**
+ * Header navbar breakpoint
+ */
+function header_navbar_breakpoint_class() {
+    return "navbar-expand-lg";
+}
+add_filter('bootscore/class/header/navbar/breakpoint', 'header_navbar_breakpoint_class', 10, 2);
+
+/**
+ * Header navbar toggler breakpoint
+ */
+function header_navbar_toggler_breakpoint_class() {
+    return "d-lg-none";
+}
+add_filter('bootscore/class/header/navbar/toggler/breakpoint', 'header_navbar_toggler_breakpoint_class', 10, 2);
