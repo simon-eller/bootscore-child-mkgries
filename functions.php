@@ -53,3 +53,42 @@ function disable_updated_time_display($show_updated_time) {
     return false;
 }
 add_filter('bootscore/meta/time/updated', 'disable_updated_time_display');
+
+/**
+ * Change footer column wrapper classes
+ */
+function footer_class() {
+    return "rounded-top pt-5 pb-4";
+}
+add_filter('bootscore/class/footer/columns', 'footer_class', 10, 2);
+
+/**
+ * Change footer 1 col
+ */
+function footer_col_4_class($string, $location) {
+    if ($location == 'footer-4') {
+        return "d-none";
+    }
+    return $string;
+}
+add_filter('bootscore/class/footer/col', 'footer_col_4_class', 10, 2);
+
+
+/**
+ * Change footer 2, 3, 4 col
+ */
+function footer_col_1_2_3_class($string, $location) {
+    if ($location == 'footer-1' || $location == 'footer-2' || $location == 'footer-3') {
+        return "col-12 col-md-4";
+    }
+    return $string;
+}
+add_filter('bootscore/class/footer/col', 'footer_col_1_2_3_class', 10, 2);
+
+/**
+ * Change footer info classes
+ */
+function footer_info_class() {
+    return "bg-primary text-light pt-2 pb-3 fs-6";
+}
+add_filter('bootscore/class/footer/info', 'footer_info_class', 10, 2);
