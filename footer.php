@@ -92,6 +92,7 @@ defined('ABSPATH') || exit;
 
 </div><!-- #page -->
 
+<script defer src="<?= get_stylesheet_directory_uri() . '/assets/js/iframemanager.js'; ?>"></script>
 <?php wp_footer(); ?>
 
 </body>

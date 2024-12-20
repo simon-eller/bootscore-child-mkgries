@@ -106,9 +106,11 @@ function bootscore_swiper($atts) {
                         <div class="swiper-slide card h-auto mb-5">
 
                             <?php if ( has_post_thumbnail() ) : ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail('medium', array('class' => 'card-img')); ?>
-                                </a>
+                                <div class="swiper-slide-image-container card-img">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_post_thumbnail('medium', array('class' => '')); ?>
+                                    </a>
+                                </div>
                             <?php endif; ?>
 
                             <div class="card-body d-flex flex-column">
