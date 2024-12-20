@@ -23,6 +23,7 @@ defined('ABSPATH') || exit;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <?php wp_head(); ?>
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() . '/assets/css/iframemanager.css'; ?>">
 </head>
 
 <body <?php body_class(); ?>>
@@ -42,7 +43,13 @@ defined('ABSPATH') || exit;
 
         <nav id="nav-main" class="navbar <?= apply_filters('bootscore/class/header/navbar/breakpoint', 'navbar-expand-lg'); ?>">
 
-            <div class="<?= apply_filters('bootscore/class/container', 'container', 'header'); ?>">
+            <div class="<?= apply_filters('bootscore/class/container', 'container', 'header'); ?> px-md-5">
+
+                <!-- Navbar Brand -->
+                <a class="navbar-brand pe-5" href="<?= esc_url(home_url()); ?>">
+                    <img src="<?= esc_url(apply_filters('bootscore/logo', get_stylesheet_directory_uri() . '/assets/img/logo/logo.svg', 'default')); ?>" alt="<?php bloginfo('name'); ?> Logo" class="d-td-none me-2" id="navbar-brand-logo">
+                    <img src="<?= esc_url(apply_filters('bootscore/logo', get_stylesheet_directory_uri() . '/assets/img/logo/logo-theme-dark.svg', 'theme-dark')); ?>" alt="<?php bloginfo('name'); ?> Logo" class="d-tl-none me-2" id="navbar-brand-logo-dark">
+                </a>
 
                 <!-- Offcanvas Navbar -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-navbar">
@@ -62,12 +69,6 @@ defined('ABSPATH') || exit;
 
                     </div>
                 </div>
-
-                <!-- Navbar Brand -->
-                <a class="navbar-brand" href="<?= esc_url(home_url()); ?>">
-                    <img src="<?= esc_url(apply_filters('bootscore/logo', get_stylesheet_directory_uri() . '/assets/img/logo/logo.svg', 'default')); ?>" alt="<?php bloginfo('name'); ?> Logo" class="d-td-none me-2" id="navbar-brand-logo">
-                    <img src="<?= esc_url(apply_filters('bootscore/logo', get_stylesheet_directory_uri() . '/assets/img/logo/logo-theme-dark.svg', 'theme-dark')); ?>" alt="<?php bloginfo('name'); ?> Logo" class="d-tl-none me-2" id="navbar-brand-logo-dark">
-                </a>
 
                 <div class="header-actions d-flex align-items-center">
 

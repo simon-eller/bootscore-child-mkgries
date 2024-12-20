@@ -2,22 +2,29 @@
 // Do you want primary to be green? Just add "$primary: #00FF00;" to this file and the theme will automatically compile the scss for you.
 
 /* COLORS */
-$primary: #8b7332;
+$primary: #18453b;
 $secondary: #ccae54;
 $body-tertiary-bg: #eaeaea;
 $light: #fff;
 $dark: #000;
 
+$variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix !default;
+
 /** light mode **/
 $primary-text: #000;
 $body-color: #000000;
+$color-contrast-dark:      $dark !default;
+$color-contrast-light:     $light !default;
 
 /* NAVBAR */
-$nav-link-font-size: 1.375rem;
-$nav-link-color: $light;
-$nav-link-hover-color: $primary;
-$navbar-dark-color: $light;
-$navbar-dark-hover-color: $primary;
+// scss-docs-start navbar-variables
+$navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
+$navbar-light-hover-color:          $secondary !default;
+$navbar-light-active-color:         $secondary !default;
+
+$navbar-dark-color:                 rgba($light, 1) !default;
+$navbar-dark-hover-color:           $secondary !default;
 
 /* TEXT */
 $font-family-sans-serif: "Jost";
@@ -37,8 +44,50 @@ $link-hover-decoration:                   underline;
 $card-border-width:                 0;
 $card-border-radius:                $border-radius !default;
 $card-inner-border-radius:          $border-radius !default;
-$card-height:                       5rem;
+
+// Offcanvas
+
+// scss-docs-start offcanvas-variables
+//$offcanvas-padding-y:               $modal-inner-padding !default;
+//$offcanvas-padding-x:               $modal-inner-padding !default;
+$offcanvas-horizontal-width:        100%;
+$offcanvas-vertical-height:         30vh !default;
+$offcanvas-transition-duration:     .3s !default;
+//$offcanvas-border-color:            $modal-content-border-color !default;
+//$offcanvas-border-width:            $modal-content-border-width !default;
+//$offcanvas-title-line-height:       $modal-title-line-height !default;
+//$offcanvas-bg-color:                var(--#{$prefix}body-bg) !default;
+//$offcanvas-color:                   var(--#{$prefix}body-color) !default;
+//$offcanvas-box-shadow:              $modal-content-box-shadow-xs !default;
+//$offcanvas-backdrop-bg:             $modal-backdrop-bg !default;
+//$offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
+// scss-docs-end offcanvas-variables
 
 .swiper-slide .card-body{
   padding: var(--bs-card-spacer-y) 0;
 }
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+/*$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1680px
+) !default;*/
+// scss-docs-end container-max-widths
+
+//@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+// scss-docs-start dropdown-variables
+$dropdown-border-color: transparent;
+//$dropdown-item-padding-x: 0;

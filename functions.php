@@ -97,7 +97,7 @@ add_filter('bootscore/class/footer/info', 'footer_info_class', 10, 2);
  * Header position and bg
  */
 function header_bg_class() {
-    return "sticky-top border-bottom p-3 bg-body";
+    return "sticky-top p-3 d-flex justify-content-center";
 }
 add_filter('bootscore/class/header', 'header_bg_class', 10, 2);
 
@@ -142,7 +142,7 @@ add_filter('bootscore/class/sidebar/offcanvas', 'change_sidebar_offcanvas');
  * Header navbar breakpoint
  */
 function header_navbar_breakpoint_class() {
-    return "navbar-expand-lg";
+    return "navbar-expand-xl bg-body rounded";
 }
 add_filter('bootscore/class/header/navbar/breakpoint', 'header_navbar_breakpoint_class', 10, 2);
 
@@ -150,6 +150,6 @@ add_filter('bootscore/class/header/navbar/breakpoint', 'header_navbar_breakpoint
  * Header navbar toggler breakpoint
  */
 function header_navbar_toggler_breakpoint_class() {
-    return "d-lg-none";
+    return "d-xl-none";
 }
 add_filter('bootscore/class/header/navbar/toggler/breakpoint', 'header_navbar_toggler_breakpoint_class', 10, 2);

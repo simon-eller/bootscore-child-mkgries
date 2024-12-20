@@ -92,7 +92,13 @@ img{
 }
 
 .navbar-brand img{
-  width: 5rem;
-}
+  width: 10rem;
+  transition: ease;
+  transition-duration: 0.3s;
+  }
 
+.nav-main{
+  --bs-bg-opacity: 0.95;
+  max-width: fit-content;
+}
 /* END IMAGE TRANSFORMATIONS */
