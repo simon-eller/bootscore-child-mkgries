@@ -153,3 +153,6 @@ function header_navbar_toggler_breakpoint_class() {
     return "d-xl-none";
 }
 add_filter('bootscore/class/header/navbar/toggler/breakpoint', 'header_navbar_toggler_breakpoint_class', 10, 2);
+
+/** Include Custom Shortcodes */
+include('custom-shortcodes.php');
