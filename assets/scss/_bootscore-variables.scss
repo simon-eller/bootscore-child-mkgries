@@ -17,6 +17,13 @@ $body-color: #000000;
 $color-contrast-dark:      $dark !default;
 $color-contrast-light:     $light !default;
 
+/** dark mode **/
+$body-color-dark:                   $light !default;
+$body-secondary-color-dark:         $body-color-dark !default;
+$link-color-dark:                   $secondary;
+$link-hover-color-dark:             $light;
+
+
 /* NAVBAR */
 // scss-docs-start navbar-variables
 $navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
@@ -91,3 +98,5 @@ $offcanvas-transition-duration:     .3s !default;
 // scss-docs-start dropdown-variables
 $dropdown-border-color: transparent;
 //$dropdown-item-padding-x: 0;
+
+$enable-negative-margins: true;
