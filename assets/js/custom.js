@@ -35,7 +35,16 @@ jQuery(function ($) {
 
     const EntryTitleCollection = document.getElementsByClassName("entry-title");
     for(let i = 0;i < EntryTitleCollection.length; i++){
-        EntryTitleCollection[i].classList.add("text-light", "bg-opacity-75", "bg-primary", "px-3", "rounded");
+        EntryTitleCollection[i].classList.add("text-light", "px-3", "container", "fw-bold");
+    }
+
+    var FullWidthImgTitleCollection = document.querySelector('.full-width-img-title');
+    FullWidthImgTitleCollection.classList.add("pt-5", "w-100", "text-center");
+    FullWidthImgTitleCollection.style.background = 'linear-gradient(#00000000 0%, #00000065 100%)';
+
+    const EntryHeaderCollection = document.getElementsByClassName("entry-header");
+    for(let o = 0;o < EntryHeaderCollection.length; o++){
+        EntryHeaderCollection[o].classList.remove("container", "pb-3")
     }
 
 }); // jQuery End
