@@ -95,7 +95,7 @@ function bootscore_swiper($atts) {
 
 
         <!-- Swiper -->
-        <div class="px-5 position-relative">
+        <div class="px-5 px-sm-2 px-md-0 position-relative">
 
             <div class="cards swiper-container swiper position-static">
 
@@ -164,8 +164,8 @@ function bootscore_swiper($atts) {
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
                 <!-- Add Arrows -->
-                <div class="swiper-button-next end-0"></div>
-                <div class="swiper-button-prev start-0"></div>
+                <div class="swiper-button-next end-0 me-sm-n4 me-md-n5"></div>
+                <div class="swiper-button-prev start-0 ms-sm-n4 ms-md-n5"></div>
 
             </div><!-- swiper-container -->
 
