@@ -3,7 +3,7 @@
 /**
  * @package Bootscore Child
  *
- * @version 6.0.0
+ * @version 6.1.0
  */
 
 
@@ -137,6 +137,15 @@ add_filter('bootscore/block/search/content', 'change_block_widget_search', 10, 2
 function change_sidebar_offcanvas($col_size) {
     return "offcanvas-lg offcanvas-start";
 }
+
+/**
+ * Header navbar-brand
+ */
+function header_navbar_brand_class() {
+    return "navbar-brand pe-5";
+}
+add_filter('bootscore/class/header/navbar-brand', 'header_navbar_brand_class', 10, 2);
+
 add_filter('bootscore/class/sidebar/offcanvas', 'change_sidebar_offcanvas');
 /**
  * Header navbar breakpoint
@@ -156,3 +165,25 @@ add_filter('bootscore/class/header/navbar/toggler/breakpoint', 'header_navbar_to
 
 /** Include Custom Shortcodes */
 include('custom-shortcodes.php');
+
+/**
+ * Change header menu offcanvas direction
+ */
+function header_menu_offcanvas_directions($string, $location) {
+    if ($location == 'menu') {
+        return "end";
+    }
+    return $string;
+}
+add_filter('bootscore/class/header/offcanvas/direction', 'header_menu_offcanvas_directions', 10, 2);
+
+/**
+ * Change header menu offcanvas direction
+ */
+function content_entry_title_se($string, $location) {
+    if ($location == 'page-full-width-image') {
+        return "mb-0";
+    }
+    return $string;
+}
+add_filter('bootscore/class/entry/title', 'content_entry_title_se', 10, 2);
